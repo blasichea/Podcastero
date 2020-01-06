@@ -1,0 +1,112 @@
+button#burger {
+    display: none;
+    background: white;
+}
+
+button#burger:focus + nav#menu {
+    display: block;
+    height: 224px;
+    width: 100%;
+    transform: translateY(-5px);    /*????????*/
+    float: none;
+    position: static;
+}
+
+/*** BARRA ***/
+header {
+    padding: 0px 100px;
+    z-index: 3;
+    height: 80px;
+    background: #ffffff;
+    opacity: 100%;
+}
+
+nav#menu {
+    display: block;
+    position: relative;
+    float: right;
+}
+
+img#logo {
+    height: 36px;
+    width: 36px;
+    margin: 22px 0px;
+}
+
+nav#menu ul {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#menu ul a {
+    margin-left: 48px;
+    text-decoration: none;
+    text-align: center;
+    font-family: IBMPlexMono;
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 28px;
+}
+
+nav#menu ul a:hover {
+    background: #e4b1a4;
+}
+
+@media all and (max-width: 700px) {
+    nav#menu {
+        display: none;
+    }
+    
+    header {
+        padding: 0px;
+        z-index: 3;
+        height: 44px;
+        background: #ffffff;
+        opacity: 100%;
+    }
+
+    img#logo {
+        margin: 10px 16px;
+        height: 24px;
+        width: 24px;
+    }
+
+    button#burger {
+        display: block;
+        float: right;
+        height: 12px;
+        width: 18px;
+        margin: 16px 19px;
+    }
+
+    button#burger span {
+        display: block;
+        border: 1px solid #000000;
+        background: #000000;
+        margin-bottom: 3px;
+    }
+
+	nav#menu ul {
+        flex-direction: column;
+        align-items: unset;
+        height: unset;
+        background: #0000EC;
+        padding: 16px 16px 0px 16px;
+    }
+
+    nav#menu li a {
+        margin-bottom: 24px;
+        margin-left: 0px;
+        font-family: IBMPlexMono;
+        font-size: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: 28px;
+        text-align: left;
+    }
+}

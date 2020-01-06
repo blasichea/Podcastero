@@ -1,0 +1,215 @@
+/*
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:medium|IBM+Plex+Sans:semibold');
+*/
+@import url("fonts.css");
+@import url("burger.css");
+@import url("mobile.css");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.no-desktop {
+    display: none;
+}
+
+.fix-nav {
+    display: block;
+    position: sticky;
+    top: 0;
+}
+
+.btn-style {
+    display: block;
+    background: #00F3BB;
+    font-family: "IBMPlexMono-Medium";
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+}
+
+.back-grad {
+    background: rgb(0,0,255);
+    background: linear-gradient(255deg, rgba(0,0,255,1) 0%, rgba(0,0,163,1) 100%);
+    -ms-transform: skewY(-5deg); /* IE 9 */
+    -webkit-transform: skewY(-5deg); /* Safari 9 */
+    transform: skewY(-5deg); /* Standard */
+}
+
+.back-nivel {
+    -ms-transform: skewY(5deg); /* IE 9 */
+    -webkit-transform: skewY(5deg); /* Safari 9 */
+    transform: skewY(5deg); /* Standard */
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+#sec1 {
+    margin: 120px 0px 5px 200px;
+}
+
+#sec1 span {
+    font-family: "IBMPlexSans";
+    font-size: 64px;
+    color: #060A24;
+    letter-spacing: 0;
+}
+
+#sec1 span:nth-child(4) {
+    font-family: "IBMPlexSans";
+    font-size: 64px;
+    color: #0000EC;
+    letter-spacing: 0;
+}
+
+#sec1 p {
+    width: 628px;
+    font-family: "IBMPlexMono";
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+#sec1 button {
+    height: 56px;
+    width: 226px;
+    margin-top: 56px;
+    margin-bottom: 5px;
+}
+
+#sec2 {
+    padding-top: 60px;
+}
+
+#sec2 span {
+    display: block;
+    margin-top: 126px;
+    margin-left: 200px;
+    font-family: "IBMPlexSans";
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+#sec2 div#pods {
+    margin: 26px 100px 64px 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#sec2 iframe {
+    margin: 2.5%;
+    width: 40.6%;
+}
+
+#sec2 div#fondo_sec2 {
+    padding-bottom: 6.9%;
+
+}
+
+#sec3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-90px);
+    margin-bottom: -36px;
+}
+
+#sec3 img#central {
+    margin-right: 62px;
+    height: 16.9%;
+    width: 31.8%;
+}
+
+#sec3 div#texto_sec3 {
+    height: 7.4%;
+    width: 32.2%;
+}
+
+#sec3 span {
+    font-family: "IBMPlexSans";
+    font-size: 48px;
+    color: #060A24;
+    letter-spacing: 0;
+}
+
+#sec3 p {
+    font-family: "IBMPlexMono";
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+#sec4 span {
+    margin-left: 200px;
+    margin-bottom: 36px;
+    font-family: "IBMPlexSans";
+    font-size: 48px;
+    color: #060A24;
+    letter-spacing: 0;
+}
+
+#sec4 #img_invit {
+    margin-top: 36px;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#sec4 img {
+    width: 33.3%;
+    height: 9.3%;
+}
+
+#sec5 span:nth-child(1) {
+    margin: 64px 0px 56px 200px;
+    font-family: "IBMPlexSans";
+    font-size: 48px;
+    color: #060A24;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+#sec5 div#temas {
+    height: 200px;
+    flex-direction: row;
+}
+
+#sec5 div#temas div {
+    width: 260px;
+    height: 175px;
+    
+}
+
+#sec5 div#temas img {
+    width: 260px;
+    height: 130px;
+}
+
+#sec5 div#temas span {
+    margin: 0% 10%;
+    width: 80%;
+    height: 64px;
+    font-family: "IBMPlexSans-SemiBold";
+    font-size: 24px;
+    color: #060A24;
+    letter-spacing: 0;
+    text-align: center;
+}

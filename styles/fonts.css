@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'IBMPlexMono';
+    src: url("../fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'IBMPlexMono-Medium';
+    src: url("../fonts/IBM_Plex_Mono/IBMPlexMono-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url("../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'IBMPlexSans-SemiBold';
+    src: url("../fonts/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf");
+}
