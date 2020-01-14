@@ -57,7 +57,7 @@ nav#menu ul a:hover {
     background: #e4b1a4;
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 992px) {
     nav#menu {
         display: none;
     }

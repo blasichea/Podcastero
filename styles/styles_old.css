@@ -5,11 +5,7 @@
 @import url("burger.css");
 @import url("mobile.css");
 
-* {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-}
+/*@media only screen and (min-width: 992px) {*/
 
 .no-desktop {
     display: none;
@@ -22,7 +18,8 @@
 }
 
 .btn-style {
-    display: block;
+    display: flex;
+    justify-content: center;
     background: #00F3BB;
     font-family: "IBMPlexMono-Medium";
     font-size: 16px;
@@ -32,18 +29,14 @@
     line-height: 22px;
 }
 
-.back-grad {
-    background: rgb(0,0,255);
-    background: linear-gradient(255deg, rgba(0,0,255,1) 0%, rgba(0,0,163,1) 100%);
-    -ms-transform: skewY(-5deg); /* IE 9 */
-    -webkit-transform: skewY(-5deg); /* Safari 9 */
-    transform: skewY(-5deg); /* Standard */
+.back-grad-inclinado {
+    background: linear-gradient(225deg, rgba(0,0,255,1) 0%, rgba(0,0,163,1) 100%);
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.back-nivel {
-    -ms-transform: skewY(5deg); /* IE 9 */
-    -webkit-transform: skewY(5deg); /* Safari 9 */
-    transform: skewY(5deg); /* Standard */
+.back-grad-inclinado-doble {
+    background: linear-gradient(225deg, rgba(0,0,255,1) 0%, rgba(0,0,163,1) 100%);
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .flex-container {
@@ -55,6 +48,8 @@
 .tachado {
     text-decoration: line-through;
 }
+                                /**** CSS DESKTOP ****/
+/* SECTION 1  #HELLO WORLD# */
 
 #sec1 {
     margin: 120px 0px 5px 200px;
@@ -90,14 +85,21 @@
     margin-bottom: 5px;
 }
 
+/* SECTION 2  #EPISODIOS# */
+
 #sec2 {
-    padding-top: 60px;
+    height: 26.7%;
 }
 
-#sec2 span {
+#sec2 div#fondo_sec2 {
+    padding-top: 4.8%;
+    padding-bottom: 6.9%;
+
+}
+
+#sec2 h1 {
     display: block;
-    margin-top: 126px;
-    margin-left: 200px;
+    margin: 0% 0% 0% 13.9%;
     font-family: "IBMPlexSans";
     font-size: 48px;
     color: #FFFFFF;
@@ -116,10 +118,7 @@
     width: 40.6%;
 }
 
-#sec2 div#fondo_sec2 {
-    padding-bottom: 6.9%;
-
-}
+/* SECTION 3  #DE DONDE VENIMOS# */
 
 #sec3 {
     display: flex;
@@ -140,7 +139,7 @@
     width: 32.2%;
 }
 
-#sec3 span {
+#sec3 h1 {
     font-family: "IBMPlexSans";
     font-size: 48px;
     color: #060A24;
@@ -157,7 +156,9 @@
     margin-bottom: 10px;
 }
 
-#sec4 span {
+/* SECTION 4  #INVITADOS# */
+
+#sec4 h1 {
     margin-left: 200px;
     margin-bottom: 36px;
     font-family: "IBMPlexSans";
@@ -178,7 +179,9 @@
     height: 9.3%;
 }
 
-#sec5 span:nth-child(1) {
+/* SECTION 5  #TEMAS# */
+
+#sec5 h1 {
     margin: 64px 0px 56px 200px;
     font-family: "IBMPlexSans";
     font-size: 48px;
@@ -195,7 +198,6 @@
 #sec5 div#temas div {
     width: 260px;
     height: 175px;
-    
 }
 
 #sec5 div#temas img {
@@ -212,4 +214,27 @@
     color: #060A24;
     letter-spacing: 0;
     text-align: center;
+}
+
+/* SECTION 6  #NOVEDADES# */
+#sec6 {
+    height: 13.2%;
+}
+
+#sec6 h1 {
+    font-family: IBMPlexSans;
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+#sec6 button {
+    height: 1.4%;
+    width: 24%;
+}
+
+/* FOOTER */
+footer div#iconos {
+    flex-direction: row;
 }

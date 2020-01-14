@@ -1,4 +1,9 @@
-@media all and (max-width: 700px) {
+@media all and (max-width: 992px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
     
     .no-mobil {
         display: none;
@@ -8,19 +13,21 @@
         display: block;
     }
 
+    /* SECTION 1  #HELLO WORLD# */
+
     section#sec1 {
         margin: 29px 16px 0px 16px;
     }
 
-    section#sec1 span:nth-child(1), section#sec1 span:nth-child(2) {
-        display: inline;
-    }
-    
     section#sec1 span {
         height: 0.8%;
         font-family: "IBMPlexSans";
         font-size: 36px;
         color: #060A24;
+    }
+    
+    section#sec1 span:nth-child(1), section#sec1 span:nth-child(2) {
+        display: inline;
     }
 
     section#sec1 p {
@@ -46,6 +53,8 @@
         margin-bottom: 24px;
     }
 
+    /* SECTION 2  #EPISODIOS# */
+
     section#sec2 {
         padding-top: 14px;
     }
@@ -55,14 +64,7 @@
         padding-bottom: 143px;
     }
 
-    section#sec2 div#pods {
-        margin: 0px 11px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    section#sec2 span {
+    section#sec2 h1 {
         height: 0.8%;
         margin-top: 0px;
         margin-bottom: 10px;
@@ -73,17 +75,25 @@
         letter-spacing: 0;
         line-height: 42px;
     }
+
+    section#sec2 div#pods {
+        margin: 0px 11px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
     
     section#sec2 iframe {
         margin: 11px 0px 0px 0px;
+        height: 232px;
         width: auto;
+        border: 0px;
     }
+
+    /* SECTION 3  #DE DONDE VENIMOS# */
 
     section#sec3 {
         flex-direction: column;
-    }
-
-    section#sec3 {
         align-items: unset;
         justify-content: unset;
         transform: translateY(-90px);
@@ -101,7 +111,7 @@
         width: 100%;
     }
 
-    section#sec3 span {
+    section#sec3 h1 {
         margin: 27px 16px 8px 16px;
         padding-right: 25%;
         font-family: "IBMPlexSans";
@@ -121,7 +131,9 @@
         margin-bottom: 10px;
     }
 
-    section#sec4 span {
+    /* SECTION 4  #INVITADOS# */
+
+    section#sec4 h1 {
         margin-left: 16px;
         margin-bottom: 14px;
         font-family: "IBMPlexSans";
@@ -139,6 +151,18 @@
         width: 100%;
     }
 
+    /* SECTION 5  #TEMAS# */
+
+    section#sec5 h1 {
+        margin: 48px 16px 24px 16px;
+        font-family: "IBMPlexSans";
+        font-size: 36px;
+        text-align: left;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 42px;
+    }
+
     section#sec5 div#temas span {
         margin: 0px 16px 36px 16px;
         width: unset;
@@ -148,16 +172,6 @@
         color: #060A24;
         letter-spacing: 0;
         text-align: center;
-    }
-
-    section#sec5 span:nth-child(1) {
-        margin: 48px 16px 24px 16px;
-        font-family: "IBMPlexSans";
-        font-size: 36px;
-        text-align: left;
-        color: #060A24;
-        letter-spacing: 0;
-        line-height: 42px;
     }
 
     section#sec5 span:last-child {
@@ -180,20 +194,14 @@
         width: 320px;
         height: 130px;
     }
-
-    section#sec6 {
-        padding-top: 14px;
-    }
     
+    /* SECTION 6  #NOVEDADES# */
+
     section#sec6 div#fondo_sec6 {
-        padding-bottom: 81px;
+        padding: 1.2% 5%;
     }
 
-    section#sec6 div#nivel_sec6 {
-        padding: 0px 16px;
-    }
-
-    section#sec6 span {
+    section#sec6 h1 {
         padding-top: 50px;
         font-family: "IBMPlexSans";
         font-size: 36px;
@@ -209,13 +217,12 @@
         margin-top: 36px;
     }
 
+    /* FOOTER */
     footer {
         position: absolute;
         width: 100%;
-        z-index: 1;
         height: 121px;
         background-color: white;
-        transform: translateY(-14px);
     }
 
     footer span {
