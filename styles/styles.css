@@ -1,27 +1,24 @@
-/*  FUENTES DESCARGADAS  */
+/*  DEFINICION DE FUENTES */
 @font-face {
-    font-family: 'IBMPlexMono';
+    font-family: "IBMPlexMono";
     src: url("../fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'IBMPlexMono-Medium';
+    font-family: "IBMPlexMono-Medium";
     src: url("../fonts/IBM_Plex_Mono/IBMPlexMono-Medium.ttf");
 }
 
 @font-face {
-    font-family: 'IBMPlexSans';
+    font-family: "IBMPlexSans";
     src: url("../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'IBMPlexSans-SemiBold';
+    font-family: "IBMPlexSans-SemiBold";
     src: url("../fonts/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf");
 }
 
-/*     ?????? PREGUNTAR ???????
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:medium|IBM+Plex+Sans:semibold');
-*/
 
 /** CARACTERISTICAS GENERALES **/
 
@@ -29,6 +26,29 @@
     margin: 0px;
     padding: 0px;
     border: 0px;
+}
+
+nav#menu ul li a:hover {
+    font-family: "IBMPlexMono-Medium";
+    font-size: 16px;
+    color: #00F3BB;
+    letter-spacing: 0;
+    line-height: 28px;
+    text-decoration: line-through;
+}
+
+nav#menu ul li a:active {
+    font-family: "IBMPlexMono", Monospace;
+    font-size: 16px;
+    color: rgba(6,10,36,0.56);
+    letter-spacing: 0;
+    line-height: 28px;
+    text-decoration: line-through;
+}
+
+button.btn-style:hover {
+    background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    color: white;
 }
 
 /** DEFINICION DE CLASES **/
@@ -43,7 +63,7 @@
     display: flex;
     justify-content: center;
     background: #00F3BB;
-    font-family: "IBMPlexMono-Medium";
+    font-family: "IBMPlexMono-Medium", Monospace;
     font-size: 16px;
     color: #060A24;
     letter-spacing: 0;
@@ -79,7 +99,7 @@
     display: none;
 }
 
-/** BARRA MOBILE **/
+/**MOBILE** BARRA MOBILE **/
 
 header {
     padding: 0px;
@@ -89,137 +109,149 @@ header {
     opacity: 100%;
 }
 
+/**MOBILE** MENU HAMBURGUESA */
+
+input#btn-check {
+    display: none;
+}
+
+input#btn-check:checked + label nav#menu {  /* PARA DESPLEGAR */
+    
+    display: inline-block;
+    height: 224px;
+    width: 100%;
+    float: none;
+}
+
+input#btn-check:checked + label span#arriba {
+    transform: translate3d(1px,6px,0) rotate(45deg);
+}
+
+input#btn-check:checked + label span#medio {
+    transform: translate3d(0,0,0) rotate(45deg);
+}
+
+input#btn-check:checked + label span#abajo {
+    transform: translate3d(0,-4px,0) rotate(-45deg);
+}
+
 img#logo {
+    float: left;
     margin: 10px 16px;
     height: 24px;
     width: 24px;
 }
 
-/* MENU HAMBURGUESA */
-
-button#burger {
-    display: block;
+div#boton {
     float: right;
     height: 12px;
     width: 18px;
     margin: 16px 19px;
 }
 
-button#burger:focus + nav#menu {  /* PARA DESPLEGAR */
-    display: block;
-    height: 224px;
-    width: 100%;
-    transform: translateY(-5px);    /*????????*/
-    float: none;
-    position: static;
-}
-
-button#burger span {
+div#boton span {
     display: block;
     border: 1px solid #000000;
     background: #000000;
     margin-bottom: 3px;
 }
 
+nav#menu {
+    display: none;
+}
+
 nav#menu ul {
     flex-direction: column;
-    align-items: unset;
-    height: unset;
+    list-style: none;
     background: #0000EC;
     padding: 16px 16px 0px 16px;
 }
 
+nav#menu li {
+    padding-bottom: 24px;
+}
+
 nav#menu li a {
-    margin-bottom: 24px;
-    margin-left: 0px;
-    font-family: IBMPlexMono;
+    display: block;
+    font-family: "IBMPlexMono", Monospace;
     font-size: 16px;
     color: #FFFFFF;
     letter-spacing: 0;
     line-height: 28px;
     text-align: left;
+    text-decoration: none;
 }
 
-/* SECTION 1  #HELLO WORLD# */
+/**MOBILE** SECTION 1  #HELLO WORLD# */
 
-section#sec1 {
+#sec1 {
     margin: 29px 16px 0px 16px;
 }
 
-section#sec1 span {
-    height: 0.8%;
-    font-family: "IBMPlexSans";
+#sec1 h1 span {
+    font-family: "IBMPlexSans", Serif;
     font-size: 36px;
     color: #060A24;
+    font-weight: normal;
 }
 
-section#sec1 span:nth-child(1), section#sec1 span:nth-child(2) {
-    display: inline;
-}
-
-section#sec1 p {
-    display: block;
+#sec1 p {
     position: relative;
     width: 100%;
     left: 0px;
     margin-top: 0.3%;
-    font-family: "IBMPlexMono";
+    font-family: "IBMPlexMono", Monospace;
     font-size: 14px;
     color: #060A24;
     letter-spacing: 0;
     line-height: 22px;
 }
-section#sec1 p.no-mobil {       
+#sec1 p.no-mobil {       
     display: none;
 }
 
-section#sec1 button {
+#sec1 button {
     height: 48px;
     width: 100%;
     margin-top: 36px;
     margin-bottom: 24px;
 }
 
-/* SECTION 2  #EPISODIOS# */
+/**MOBILE** SECTION 2  #EPISODIOS# */
 
-section#sec2 {
-    padding-top: 14px;
-}
-
-section#sec2 div#fondo_sec2 {
-    padding-top: 50px;
+#sec2 div#episodios {
+    padding-top: 64px;
     padding-bottom: 143px;
 }
 
-section#sec2 h1 {
-    height: 0.8%;
-    margin-top: 0px;
+#sec2 h2 {
     margin-bottom: 10px;
     margin-left: 16px;
-    font-family: "IBMPlexSans";
+    font-family: "IBMPlexSans", Serif;
     font-size: 36px;
     color: #FFFFFF;
     letter-spacing: 0;
     line-height: 42px;
+    font-weight: normal;
 }
 
-section#sec2 div#pods {
+#sec2 div#pods {
     margin: 0px 11px;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-section#sec2 iframe {
+#sec2 iframe {
     margin: 11px 0px 0px 0px;
     height: 232px;
     width: auto;
     border: 0px;
 }
 
-/* SECTION 3  #DE DONDE VENIMOS# */
+/**MOBILE** SECTION 3  #DE DONDE VENIMOS# */
 
-section#sec3 {
+#sec3 {
     flex-direction: column;
     align-items: unset;
     justify-content: unset;
@@ -227,30 +259,31 @@ section#sec3 {
     margin-bottom: -36px;
 }
 
-section#sec3 img#central {
+#sec3 img#central {
     margin-right: 0px;
     height: 100%;
     width: 100%;
 }
 
-section#sec3 div#texto_sec3 {
+#sec3 div#texto_sec3 {
     height: 7.4%;
     width: 100%;
 }
 
-section#sec3 h1 {
+#sec3 h2 {
     margin: 27px 16px 8px 16px;
     padding-right: 25%;
-    font-family: "IBMPlexSans";
+    font-family: "IBMPlexSans", Serif;
     font-size: 36px;
+    font-weight: normal;
     color: #060A24;
     letter-spacing: 0;
     line-height: 42px;
 }
 
-section#sec3 p {
+#sec3 p {
     padding: 0px 16px 0px 16px;
-    font-family: "IBMPlexMono";
+    font-family: "IBMPlexMono", Monospace;
     font-size: 14px;
     color: #060A24;
     letter-spacing: 0;
@@ -258,104 +291,109 @@ section#sec3 p {
     margin-bottom: 10px;
 }
 
-/* SECTION 4  #INVITADOS# */
+/**MOBILE** SECTION 4  #INVITADOS# */
 
-section#sec4 h1 {
+#sec4 h2 {
     margin-left: 16px;
     margin-bottom: 14px;
-    font-family: "IBMPlexSans";
+    font-family: "IBMPlexSans", Serif;
     font-size: 36px;
+    font-weight: normal;
     color: #060A24;
     letter-spacing: 0;
     line-height: 42px;
 }
 
-section#sec4 #img_invit{
+#sec4 #img_invit{
     margin-top: 0px;
 }
 
-section#sec4 img {
+#sec4 img {
     width: 100%;
 }
 
-/* SECTION 5  #TEMAS# */
+/**MOBILE** SECTION 5  #TEMAS# */
 
-section#sec5 h1 {
+#sec5 h2 {
     margin: 48px 16px 24px 16px;
-    font-family: "IBMPlexSans";
+    font-family: "IBMPlexSans", Serif;
     font-size: 36px;
+    font-weight: normal;
     text-align: left;
     color: #060A24;
     letter-spacing: 0;
     line-height: 42px;
 }
 
-section#sec5 div#temas span {
+#sec5 div#temas span {
     margin: 0px 16px 36px 16px;
     width: unset;
     height: unset;
-    font-family: "IBMPlexSans-SemiBold";
+    font-family: "IBMPlexSans-SemiBold", "Sans serif";
     font-size: 24px;
     color: #060A24;
     letter-spacing: 0;
     text-align: center;
 }
 
-section#sec5 span:last-child {
+#sec5 span:last-child {
     margin-bottom: 42px;
 }
 
-section#sec5 div#temas {
+#sec5 div#temas {
     height: unset;
     flex-direction: column;
 }
 
-section#sec5 div#temas div {
+#sec5 div#temas div {
     width: 100%;
     height: 175px;
     
 }
 
-section#sec5 div#temas img {
+#sec5 div#temas img {
     display: block;
-    width: 320px;
     height: 130px;
 }
 
-/* SECTION 6  #NOVEDADES# */
+/**MOBILE** SECTION 6  #NOVEDADES# */
 
-section#sec6 div#fondo_sec6 {
+#sec6 div#novedades {
     padding: 1.2% 5%;
 }
 
-section#sec6 h1 {
+#sec6 h2 {
     padding-top: 50px;
-    font-family: "IBMPlexSans";
+    font-family: "IBMPlexSans", Serif;
     font-size: 36px;
+    font-weight: normal;
     color: #FFFFFF;
     letter-spacing: 0;
     text-align: center;
     line-height: 42px;
 }
 
-section#sec6 button {
+#sec6 button {
     height: 48px;
     width: 100%;
     margin-top: 36px;
+    margin-bottom: 67px;
 }
 
-/* FOOTER */
+/**MOBILE** FOOTER */
 
 footer {
     position: absolute;
     width: 100%;
-    height: 121px;
+    height: auto;
     background-color: white;
 }
 
 footer span {
-    margin: 24px 46px 16px 47px;
-    font-family: "IBMPlexMono";
+    display: flex;
+    justify-content: center;
+    margin: 24px 0px 16px 0px;
+    font-family: "IBMPlexMono", Monospace;
     font-size: 14px;
     color: #060A24;
     letter-spacing: 0;
@@ -367,7 +405,7 @@ footer div#iconos {
 }
 
 footer i {
-    margin: 0px 19px;
+    margin: 0px 19px 31px 19px;
     width: 16px;
     font-size: 16px;
     color: #060A24;
@@ -386,7 +424,7 @@ footer i {
 
     /** BARRA DESKTOP **/
 
-    header {
+    body header {
         padding: 0px 100px;
         z-index: 3;
         height: 80px;
@@ -400,20 +438,31 @@ footer i {
         margin: 22px 0px;
     }
 
-    nav#menu ul {
+    header nav#menu {
+        display: block;
+        position: relative;
+        float: right;
+    }
+
+    header nav#menu ul {
         display: flex;
+        flex-direction: row;
         align-items: center;
         height: 80px;
         list-style: none;
-        margin: 0;
-        padding: 0;
+        background: white;
+        padding-top: 0px;
     }
     
-    nav#menu ul a {
+    header nav#menu ul li {
+        padding-bottom: 0px;
+    }
+
+    header nav#menu ul a {
         margin-left: 48px;
         text-decoration: none;
         text-align: center;
-        font-family: IBMPlexMono;
+        font-family: "IBMPlexMono", Monospace;
         font-size: 16px;
         color: #060A24;
         letter-spacing: 0;
@@ -431,23 +480,25 @@ footer i {
         margin: 120px 0px 5px 200px;
     }
 
-    #sec1 span {
-        font-family: "IBMPlexSans";
+    #sec1 h1 span {
+        font-family: "IBMPlexSans", Serif;
         font-size: 64px;
         color: #060A24;
         letter-spacing: 0;
     }
 
-    #sec1 span:nth-child(4) {
-        font-family: "IBMPlexSans";
+    #sec1 h1 span:nth-child(4) {
+        display: inline;
+        font-family: "IBMPlexSans", Serif;
         font-size: 64px;
         color: #0000EC;
         letter-spacing: 0;
     }
 
-    #sec1 p {
+    #sec1 p.no-mobil {
+        display: block;
         width: 628px;
-        font-family: "IBMPlexMono";
+        font-family: "IBMPlexMono", Monospace;
         font-size: 16px;
         color: #060A24;
         letter-spacing: 0;
@@ -463,20 +514,15 @@ footer i {
 
     /* SECTION 2  #EPISODIOS# */
 
-    #sec2 {
-        height: 26.7%;
+    #sec2 div#episodios {
+        padding-top: 186px;
+        padding-bottom: 232.6px;
     }
 
-    #sec2 div#fondo_sec2 {
-        padding-top: 4.8%;
-        padding-bottom: 6.9%;
-
-    }
-
-    #sec2 h1 {
-        display: block;
-        margin: 0% 0% 0% 13.9%;
-        font-family: "IBMPlexSans";
+    #sec2 h2 {
+        margin-left: 200px;
+        margin-bottom: 0px;
+        font-family: "IBMPlexSans", Serif;
         font-size: 48px;
         color: #FFFFFF;
         letter-spacing: 0;
@@ -485,6 +531,7 @@ footer i {
     #sec2 div#pods {
         margin: 26px 100px 64px 100px;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -498,10 +545,10 @@ footer i {
 
     #sec3 {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         transform: translateY(-90px);
-        margin-bottom: -36px;
     }
 
     #sec3 img#central {
@@ -515,15 +562,15 @@ footer i {
         width: 32.2%;
     }
 
-    #sec3 h1 {
-        font-family: "IBMPlexSans";
+    #sec3 h2 {
+        font-family: "IBMPlexSans", Serif;
         font-size: 48px;
         color: #060A24;
         letter-spacing: 0;
     }
 
     #sec3 p {
-        font-family: "IBMPlexMono";
+        font-family: "IBMPlexMono", Monospace;
         font-size: 16px;
         color: #060A24;
         letter-spacing: 0;
@@ -534,10 +581,10 @@ footer i {
 
     /* SECTION 4  #INVITADOS# */
 
-    #sec4 h1 {
+    #sec4 h2 {
         margin-left: 200px;
         margin-bottom: 36px;
-        font-family: "IBMPlexSans";
+        font-family: "IBMPlexSans", Serif;
         font-size: 48px;
         color: #060A24;
         letter-spacing: 0;
@@ -557,9 +604,9 @@ footer i {
 
     /* SECTION 5  #TEMAS# */
 
-    #sec5 h1 {
+    #sec5 h2 {
         margin: 64px 0px 56px 200px;
-        font-family: "IBMPlexSans";
+        font-family: "IBMPlexSans", Serif;
         font-size: 48px;
         color: #060A24;
         letter-spacing: 0;
@@ -585,7 +632,7 @@ footer i {
         margin: 0% 10%;
         width: 80%;
         height: 64px;
-        font-family: "IBMPlexSans-SemiBold";
+        font-family: "IBMPlexSans-SemiBold", "Sans serif";
         font-size: 24px;
         color: #060A24;
         letter-spacing: 0;
@@ -594,12 +641,14 @@ footer i {
 
     /* SECTION 6  #NOVEDADES# */
 
-    #sec6 {
-        height: 13.2%;
+    #sec6 div#novedades {
+        display: flex;
+        justify-content: center;
     }
 
-    #sec6 h1 {
-        font-family: IBMPlexSans;
+    #sec6 h2 {
+        padding-top: 213px;
+        font-family: "IBMPlexSans", Serif;
         font-size: 48px;
         color: #FFFFFF;
         letter-spacing: 0;
@@ -607,13 +656,31 @@ footer i {
     }
 
     #sec6 button {
-        height: 1.4%;
+        height: 56px;
         width: 24%;
+        margin-left: 38%;
     }
 
     /* FOOTER */
 
+    footer#foot {
+        height: 95px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer span {
+        margin: 0px 0px 0px 100px;
+    }
+
     footer div#iconos {
         flex-direction: row;
+        align-items: center;
+        margin-right: 100px;
+    }
+
+    footer i {
+        margin: 0px 0px 0px 36px;
     }
 }
