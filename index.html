@@ -9,24 +9,31 @@
     <title>Podcastero</title>
 </head>
 <body>
-    <header class="fix-nav" id="inicio">
-        <input type="checkbox" id="btn-check">
-        <label for="btn-check">
+
+    <div class="back-arrow" id="btn-home">
+        <a href="#inicio">
+            <img src="images/home_white.svg" alt="boton inicio">
+        </a>
+    </div>
+
+    <header id="inicio">
+        <nav>
             <a href="#inicio"><img id="logo" src="./images/logo.svg" alt="logo"></a>
-            <div class="no-desktop" id="boton">
+            <input type="checkbox" id="btn-check"> 
+            <label for="btn-check">
                 <span id="arriba"></span>
                 <span id="medio"></span>
                 <span id="abajo"></span>
-            </div>
-            <nav id="menu">
+            </label>
+            <div id="menu">
                 <ul>
                     <li><a href="#sec2">EPISODIOS</a></li>
                     <li><a href="#sec3">NOSOTROS</a></li>
                     <li><a href="#sec4">ENTREVISTAS</a></li>
                     <li><a href="#sec5">TÓPICOS</a></li>
                 </ul>
-            </nav>
-        </label>
+            </div>
+        </nav>
     </header>
 
     <section id="sec1">
@@ -110,11 +117,21 @@
     <footer class="flex-container" id="foot">
         <span>© 2019— Hello blue pale dot</span>
         <div class="flex-container" id="iconos">
-            <i class="fab fa-spotify"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-telegram"></i>
+            <a href="https://www.spotify.com/ar/">
+                <i class="fab fa-spotify"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://es-la.facebook.com/">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://telegram.org/">
+                <i class="fab fa-telegram"></i>
+            </a>
         </div>
     </footer>
 </body>
